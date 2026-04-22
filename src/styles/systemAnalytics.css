@@ -1,0 +1,120 @@
+/* System Analytics Styles */
+
+.analytics-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--gradient-hero);
+}
+
+.stat-icon-wrapper {
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.icon-wrap-users { background: rgba(59, 130, 246, 0.15); }
+.icon-wrap-doctors { background: rgba(16, 185, 129, 0.1); }
+.icon-wrap-researchers { background: rgba(139, 92, 246, 0.1); }
+
+.stat-value {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.analytics-panels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.panel-header {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background: var(--border);
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+}
+.progress-autism { background: var(--primary); width: 85%; }
+.progress-adhd { background: var(--secondary); width: 45%; }
+
+.accuracy-metrics {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metric-box {
+  flex: 1;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.screening-stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.screening-stat-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.screening-stat-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.screening-stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

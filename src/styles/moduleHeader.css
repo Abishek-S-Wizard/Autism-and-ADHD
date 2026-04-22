@@ -1,0 +1,78 @@
+/* Module Header Styles for Dashboard Sub-pages */
+.module-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.module-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.module-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific module icon backgrounds */
+.icon-box-primary { background: var(--gradient-hero); color: var(--primary); }
+.icon-box-secondary { background: rgba(16, 185, 129, 0.1); color: var(--secondary); }
+.icon-box-accent { background: rgba(139, 92, 246, 0.1); color: var(--accent); }
+.icon-box-blue { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+.icon-box-danger { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
+
+.module-title {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.module-subtitle {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Search bar wrapper in header */
+.module-search-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.module-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.module-search-input {
+  padding-left: 3rem !important;
+  width: 100%;
+}
+
+/* Common Back Link */
+.module-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.module-back-link:hover {
+  color: var(--primary);
+}

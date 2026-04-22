@@ -1,0 +1,44 @@
+/* Researcher Profile layout (wraps common layout structures for consistency) */
+/* Structure mirrors doctor profile to some degree */
+
+.researcher-form-area {
+  padding: 2.5rem !important;
+  max-width: 800px;
+}
+
+.researcher-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.researcher-section-header {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.researcher-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.researcher-input-full {
+  grid-column: 1 / -1;
+}
+
+.researcher-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.researcher-input-disabled {
+  background: var(--background) !important;
+  cursor: not-allowed !important;
+  color: var(--text-secondary) !important;
+}

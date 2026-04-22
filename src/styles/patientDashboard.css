@@ -1,0 +1,159 @@
+/* Patient Dashboard Styles */
+.patient-dashboard-container {
+  padding: 1rem 0;
+}
+
+.patient-dashboard-header {
+  margin-bottom: 4rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patient-logout-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ef4444;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.patient-logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.patient-dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.patient-dashboard-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.patient-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.patient-module-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.01);
+}
+
+.patient-module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.patient-module-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.patient-module-card:hover::after {
+  opacity: 1;
+}
+
+.patient-icon-container {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.patient-icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+.patient-module-card:hover .patient-icon-container {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.patient-module-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.patient-module-desc {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.module-tag {
+  display: inline-flex;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Tag Themes */
+.tag-blue { background: #eff6ff; color: #3b82f6; }
+.tag-green { background: #f0fdf4; color: #22c55e; }
+.tag-purple { background: #f5f3ff; color: #8b5cf6; }
+.tag-pink { background: #fdf2f8; color: #ec4899; }
+.tag-amber { background: #fffbeb; color: #f59e0b; }
+.tag-cyan { background: #ecfeff; color: #06b6d4; }
+.tag-indigo { background: #eef2ff; color: #6366f1; }
+.tag-slate { background: #f8fafc; color: #64748b; }
+
+/* Specific icon themes with soft glows */
+.pat-theme-autism { background: #eff6ff; color: #1d4ed8; }
+.pat-theme-adhd { background: #f0fdf4; color: #15803d; }
+.pat-theme-screening { background: #f5f3ff; color: #6d28d9; }
+.pat-theme-reports { background: #fdf2f8; color: #be185d; }
+.pat-theme-query { background: #fffbeb; color: #b45309; }
+.pat-theme-info { background: #ecfeff; color: #0891b2; }
+.pat-theme-chatbot { background: #eef2ff; color: #4338ca; }
+.pat-theme-profile { background: #f8fafc; color: #475569; }
+
+@media (max-width: 640px) {
+  .patient-dashboard-grid { grid-template-columns: 1fr; }
+}

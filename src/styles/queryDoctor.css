@@ -1,0 +1,210 @@
+/* Patient Queries - Premium Redesign */
+.query-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.query-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.query-back-button:hover {
+  color: #f59e0b;
+  transform: translateX(-4px);
+}
+
+.query-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.query-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.query-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.query-chat-card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,0.01);
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow: hidden;
+}
+
+.query-history {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+  background: #fcfcfd;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chat-system-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+  position: relative;
+}
+
+.chat-system-info::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #f1f5f9;
+}
+
+.chat-system-info::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #f1f5f9;
+}
+
+.message-row {
+  display: flex;
+  gap: 1rem;
+  max-width: 85%;
+}
+
+.message-row-user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.avatar-doctor { background: #10b981; }
+.avatar-patient { background: #3b82f6; }
+
+.message-bubble {
+  padding: 1.25rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bubble-doctor {
+  background: white;
+  color: #1e293b;
+  border: 1px solid #f1f5f9;
+  border-top-left-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.bubble-patient {
+  background: #3b82f6;
+  color: white;
+  border-top-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.message-time {
+  font-size: 0.7rem;
+  margin-top: 0.6rem;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.bubble-patient .message-time { text-align: right; }
+
+.query-input-area {
+  padding: 1.5rem 2.5rem;
+  background: white;
+  border-top: 1px solid #f1f5f9;
+}
+
+.query-input-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #f8fafc;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  border-radius: 100px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.query-input-form:focus-within {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.05);
+}
+
+.query-text-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.query-send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #10b981;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.query-send-btn:hover {
+  background: #059669;
+  transform: scale(1.05);
+}
+
+.query-send-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}

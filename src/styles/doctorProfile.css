@@ -1,0 +1,56 @@
+/* Doctor Profile Specific Styles */
+/* Reuses layout structures similar to adminProfile.css but distinct file per requirements */
+
+.profile-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 2fr;
+  gap: 2rem;
+}
+
+.profile-form-area {
+  padding: 2.5rem !important;
+  max-width: 800px;
+}
+
+.profile-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-section-header {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.profile-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.profile-input-grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.profile-input-full {
+  grid-column: 1 / -1;
+}
+
+.profile-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.input-disabled {
+  background: var(--background) !important;
+  cursor: not-allowed !important;
+  color: var(--text-secondary) !important;
+}

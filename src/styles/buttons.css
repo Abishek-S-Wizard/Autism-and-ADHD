@@ -1,0 +1,76 @@
+/* Button Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Primary Gradient Button */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+  color: white;
+}
+
+/* Secondary Button outline/surface */
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--background);
+  border-color: var(--text-secondary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Danger Button */
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+/* Unique Login Button Styling (as requested) */
+.btn-login {
+  background: var(--gradient-accent); /* Unique Purple-Pink Gradient */
+  color: white;
+  border: none;
+  border-radius: var(--radius-full); /* Pill shape for login */
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(219, 39, 119, 0.5); /* Pink glow */
+  color: white;
+}
+
+/* Full Width Button Modifier */
+.btn-full {
+  width: 100%;
+}

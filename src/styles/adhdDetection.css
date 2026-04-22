@@ -1,0 +1,239 @@
+/* ADHD Detection Module - Premium Redesign */
+.adhd-detection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.adhd-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adhd-back-button:hover {
+  color: #6366f1;
+  background: white;
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.adhd-detection-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+  animation: slideDown 0.8s ease-out;
+}
+
+.adhd-detection-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.adhd-detection-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.adhd-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 968px) {
+  .adhd-analysis-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.premium-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 32px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.08);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.adhd-dropzone {
+  position: relative;
+  height: 320px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(248, 250, 252, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.adhd-dropzone.has-file {
+  border-style: solid;
+  border-color: #6366f1;
+}
+
+.adhd-dropzone:hover:not(.has-file) {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.03);
+}
+
+.adhd-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.preview-container:hover .preview-overlay {
+  opacity: 1;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #94a3b8;
+}
+
+.adhd-upload-icon-pulse {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  animation: pulseShadowIndigo 2s infinite;
+}
+
+@keyframes pulseShadowIndigo {
+  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2); }
+  70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+.adhd-analyze-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.adhd-analyze-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.3);
+}
+
+.adhd-analyze-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+.adhd-empty-results {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.result-main-card {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 2.5rem;
+  border-radius: 24px;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-main-card.adhd-variant {
+  background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+}
+
+.result-value-main {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.red-text { color: #f87171; }
+
+.history-card.adhd-hover:hover {
+  border-color: #6366f1;
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.06);
+}
+
+.is-adhd { background: #e0e7ff; color: #4338ca; }

@@ -1,0 +1,205 @@
+@import url('./inputs.css');
+
+/* Common Auth Form Styles */
+.auth-form-card {
+  width: 100%;
+  padding: 1.75rem 2rem;
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-form-card.wide {
+  max-width: 800px;
+  padding: 1.5rem 2.5rem;
+}
+
+.auth-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.auth-back-link:hover {
+  color: white;
+  transform: translateX(-3px);
+}
+
+.auth-form-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.auth-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.auth-form-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+  color: white;
+}
+
+.auth-form-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Form Controls Overrides - Scoped to Auth Cards */
+.auth-form-card .input-group label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.4rem !important;
+  font-size: 0.85rem !important;
+}
+
+.auth-form-card .input-field {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 0.65rem 0.9rem !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.auth-form-card .input-field:focus {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05) !important;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 2.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+}
+
+.auth-password-toggle:hover {
+  color: white;
+}
+
+.auth-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.auth-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.auth-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: white;
+}
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-footer-link {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+/* Role Specific Button Gradients */
+.btn-auth-patient { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+.btn-auth-doctor { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+.btn-auth-researcher { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #1e293b; }
+.btn-auth-admin { background: linear-gradient(135deg, #7f00ff, #e100ff); }
+
+.btn-auth-patient:hover, .btn-auth-doctor:hover, .btn-auth-admin:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .auth-form-card {
+    padding: 1.5rem 1.25rem;
+    margin: 0.5rem;
+  }
+}

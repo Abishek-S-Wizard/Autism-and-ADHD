@@ -1,0 +1,133 @@
+/* Sticky Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  z-index: 1000;
+  transition: var(--transition-slow);
+  background: transparent; /* transparent initially */
+}
+
+/* Scrolled State for Navbar (Gradient or Glass) */
+.navbar.scrolled {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.navbar.scrolled .nav-link {
+  color: var(--text-primary);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: var(--transition);
+}
+
+/* Hover Underline Animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--gradient-primary);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Mobile Menu Variables */
+.mobile-menu-btn {
+  display: none;
+  width: 30px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-links, .nav-buttons {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .navbar.menu-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    gap: 1.5rem;
+  }
+  
+  .navbar.menu-open .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    padding: 0 2rem 2rem 2rem;
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1);
+  }
+}

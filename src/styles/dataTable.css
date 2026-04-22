@@ -1,0 +1,104 @@
+/* Shared Data Table Styles */
+.table-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.data-table tr:hover td {
+  background: var(--surface);
+}
+
+.data-table .font-medium {
+  font-weight: 500;
+}
+
+.data-table .font-semibold {
+  font-weight: 600;
+}
+
+.data-table .text-secondary {
+  color: var(--text-secondary);
+}
+
+.data-table .font-mono {
+  font-family: monospace;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-approved { background: rgba(16, 185, 129, 0.1); color: #10B981; }
+.status-rejected { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
+.status-pending { background: rgba(245, 158, 11, 0.1); color: #F59E0B; }
+.status-active { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+
+/* Action Buttons inside Table */
+.action-cell {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: none;
+}
+.action-btn:hover {
+  transform: scale(1.05);
+}
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.action-approve { background: rgba(16, 185, 129, 0.1); color: #10B981; }
+.action-reject { background: rgba(245, 158, 11, 0.1); color: #F59E0B; }
+.action-delete { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
+.action-update { background: var(--surface); color: var(--primary); border: 1px solid var(--border); }
+.action-view { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+
+.table-empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+}

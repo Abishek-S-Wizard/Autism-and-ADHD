@@ -1,0 +1,172 @@
+/* Resource List Styles (Medical Datasets, Research Papers) */
+
+.resource-notice-banner {
+  padding: 1.5rem;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resource-notice-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Dataset Cards Grid */
+.datasets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.dataset-card {
+  padding: 0 !important;
+  overflow: hidden;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.dataset-card-body {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dataset-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dataset-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dataset-card-footer {
+  padding: 1.5rem;
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.dataset-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Research Papers List */
+.papers-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.paper-card {
+  padding: 2.5rem !important;
+  border-left: 4px solid var(--primary);
+}
+
+.paper-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.paper-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.paper-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.paper-meta-value { font-weight: 500; }
+.paper-meta-primary { color: var(--primary); }
+
+.paper-abstract-box {
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+}
+
+.paper-abstract-title {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.paper-abstract-text {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Research Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.material-card {
+  padding: 2rem !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.material-icon-wrapper {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.icon-wrapper-primary { background: rgba(59, 130, 246, 0.1); }
+.icon-wrapper-secondary { background: rgba(16, 185, 129, 0.1); }
+.icon-wrapper-accent { background: rgba(139, 92, 246, 0.1); }
+
+.material-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.material-card-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.material-btn-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+

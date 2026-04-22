@@ -1,0 +1,371 @@
+/* 🧬 Patient Reports - Premium Clinical Redesign */
+:root {
+  --clinical-bg: #f8fafc;
+  --report-blue: #3b82f6;
+  --report-emerald: #10b981;
+  --report-amber: #f59e0b;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+.reports-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--clinical-bg);
+  min-height: 100vh;
+}
+
+/* Header */
+.reports-header-section {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.back-to-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+}
+
+.reports-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.reports-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Layout */
+.reports-main-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Sidebar List */
+.reports-list-column .section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.reports-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.report-summary-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.report-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.report-summary-card.active {
+  border-color: var(--report-blue);
+  background: #f0f7ff;
+}
+
+.report-icon-bg {
+  width: 54px;
+  height: 54px;
+  background: #eff6ff;
+  color: var(--report-blue);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.report-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.report-meta {
+  display: flex;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.report-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Detail View */
+.report-full-view {
+  background: white;
+  border-radius: 32px;
+  padding: 3.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+  position: sticky;
+  top: 2rem;
+}
+
+.report-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.header-main h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.report-id-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.download-report-btn {
+  background: var(--text-dark);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-report-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  background: #1e293b;
+}
+
+.report-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.diagnosis-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.summary-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Snapshots Grid */
+.detection-snapshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.snapshot-item {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+}
+
+.snapshot-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.snapshot-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.snapshot-conf {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Notes */
+.notes-section {
+  padding: 2rem;
+  background: #fffcf0;
+  border: 1px solid #fef3c7;
+  border-radius: 24px;
+}
+
+.notes-text {
+  font-style: italic;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+/* Footer */
+.report-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verified-stamp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--report-emerald);
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Empty States */
+.report-selection-placeholder {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  gap: 1.5rem;
+}
+/* 🖨️ Print Styles - Clinical Report Export */
+@media print {
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .reports-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    background: white !important;
+  }
+
+  .reports-main-layout {
+    display: block !important;
+  }
+
+  .report-detail-column {
+    width: 100% !important;
+  }
+
+  .report-full-view {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    position: static !important;
+    width: 100% !important; /* Ensure it takes full width for A4 */
+  }
+
+  /* Keep colors and backgrounds in PDF */
+  .snapshot-item {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    break-inside: avoid;
+  }
+
+  .notes-section {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: #fffcf0 !important;
+    border: 1px solid #fef3c7 !important;
+    break-inside: avoid;
+  }
+
+  .diagnosis-text, .summary-text, .header-main h2 {
+    color: black !important;
+  }
+
+  /* Avoid breaking important sections across pages */
+  .report-section, .detection-snapshots-grid {
+    break-inside: avoid;
+  }
+
+  .report-footer {
+    margin-top: 2rem !important;
+  }
+}

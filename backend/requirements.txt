@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+google-genai
+supabase
+python-dotenv
+pydantic
+tensorflow
+keras
+numpy
+pillow
+python-multipart
+pydicom
+opencv-python-headless
+nibabel
+openai-whisper
+openai
+setuptools

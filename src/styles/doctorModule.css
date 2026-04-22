@@ -1,0 +1,46 @@
+/* Doctor Module - Premium Centered Headers */
+.doctor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.doctor-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.doctor-back-link:hover {
+  color: #ee0979;
+  transform: translateX(-4px);
+}
+
+.doctor-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.doctor-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
